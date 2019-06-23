@@ -1,24 +1,25 @@
 import React from 'react';
-import ReactDOM from 'react-dom';
-import {BrowserRouter, Route} from 'react-router-dom';
+import {BrowserRouter, Route, Link} from 'react-router-dom';
 
-const PageOne = () => {
-	return <div>page one.... <a href="/pagetwo">Page 2</a></div>
-}
-
-const PageTwo = () => {
-	return <div>page two... <a href="/">home</a></div>
-}
+import StreamList from './streams/stream-list';
+import ShowStream from './streams/show-stream';
+import CreateStream from './streams/create-stream';
+import EditStream from './streams/edit-stream';
+import DeleteStream from './streams/delete-stream';
+import Header from './header';
 
 const App = () => {
-	return <div>
+	return <div className="ui container">
 		<BrowserRouter>
 		<div>
-			<Route path="/" exact component={PageOne}/>
-			<Route path="/pagetwo" component={PageTwo} />
+			<Header />
+			<Route path="/" exact component={StreamList}/>
+			<Route path="/streams/new" component={CreateStream}/>
+			<Route path="/streams/edit" component={EditStream}/>
+			<Route path="/streams/delete" component={DeleteStream}/>
+			<Route path="/streams/show" component={ShowStream}/>
 		</div>
 		</BrowserRouter>
-		haaaalo from root app :)
 	</div>
 }
 
