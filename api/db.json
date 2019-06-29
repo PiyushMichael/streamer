@@ -4,6 +4,11 @@
       "title": "pulsar",
       "description": "a faux video stream for pulsar bikes.. i hope this goes into the db.json hui hui hui",
       "id": 1
+    },
+    {
+      "title": "other stream",
+      "description": "the other stream about apaches and bullets eheh",
+      "id": 2
     }
   ]
 }
