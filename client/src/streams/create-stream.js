@@ -1,6 +1,8 @@
 import React from 'react';
 import {Field, reduxForm} from 'redux-form';
 import {Link} from 'react-router-dom';
+import {connect} from 'react-redux';
+import {createStream} from '../actions';
 
 class CreateStream extends React.Component{
 	renderInput({input,label,meta}){
@@ -12,9 +14,8 @@ class CreateStream extends React.Component{
 		</div>);
 	};
 	
-	onSubmit (values) {
-		//values.preventDefault();
-		console.log(values);
+	onSubmit = (values) => {
+		this.props.createStream(values);
 	};
 	
 	render(){
@@ -42,7 +43,9 @@ const validate = (formValues) => {
 	return errors;
 };
 
-export default reduxForm({
+const formWrapped = reduxForm({
 	form: 'streamCreate',
 	validate: validate
 })(CreateStream);
+
+export default connect(null,{createStream})(formWrapped);

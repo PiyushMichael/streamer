@@ -1,3 +1,9 @@
 {
-	"streams": []
+  "streams": [
+    {
+      "title": "pulsar",
+      "description": "a faux video stream for pulsar bikes.. i hope this goes into the db.json hui hui hui",
+      "id": 1
+    }
+  ]
 }
