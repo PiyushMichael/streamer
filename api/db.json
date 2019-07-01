@@ -49,19 +49,19 @@
     },
     {
       "title": "random stream",
-      "description": "to check auto navigate of this router :/",
+      "description": "to check auto navigate of this router :/ ..... is edit working now really?",
       "user": 1234,
       "id": 10
     },
     {
-      "title": "exact",
+      "title": "exact - patched",
       "description": "added exact to all route components",
       "user": 1234,
       "id": 11
     },
     {
       "title": "new streams function",
-      "description": "to check if the component re-use is working",
+      "description": "NOW is it working???",
       "user": 1234,
       "id": 12
     }
