@@ -14,7 +14,7 @@ class StreamList extends React.Component{
 				{this.showButtons(stream)}
 				<i className="large middle aligned icon camera" />
 				<div className="content">
-					<b>{stream.title}</b>
+					<Link to={`/streams/${stream.id}`} className="header">{stream.title}</Link>
 					<div className="description">{stream.description}</div>
 				</div>
 			</div>);
